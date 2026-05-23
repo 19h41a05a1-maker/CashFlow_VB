@@ -1,0 +1,271 @@
+Cash Management - 5 Days Hold Checking - Production Team
+Within our current operations, whenever an account receives a credit—via ACH or cheque—the credited amount must be held back for five business days. Any debit or disbursement request may only be processed after this mandatory holding period has elapsed. Presently, this verification is performed manually by the production team each time a disbursement is requested, leading to delays, potential errors, and increased operational overhead.
+Business Problem Statement:
+We require an automated solution that can monitor account activity and accurately verify whether any credits have occurred within the last five business days. The tool should seamlessly check the account for recent credits and enforce the five-day hold for debits, thus streamlining our workflow, reducing manual intervention, and minimizing risk. This automation will enhance efficiency, ensure compliance with cash management policies, and provide real-time assurance of account status for both operational and regulatory needs.
+This problem statement aligns with our ongoing efforts to modernize financial operations by leveraging real-time event-driven accounting practices, and supports the production team's need for secure, accurate, and scalable cash management processes.
+Expected Output
+•	Automated verification of account credits received within the last five business days.
+•	Prevention of debit/disbursement processing until the five-day hold period is completed.
+•	Real-time dashboard for production team to monitor account status, hold periods, and transaction eligibility.
+•	Audit trail for compliance, with logs of credit, hold, and disbursement events.
+•	Reduction in manual intervention, error rates, and operational delays.
+•	Seamless integration with existing accounting and banking systems.
+
+ 
+Sample Input: Account Number, Amount, Customer Name, MMI ID (to get confirmation from Gaurav)
+Sample Output: Account Number, Amount, Customer Name, MMI ID (to get more details from Gaurav)
+  prompt :
+  Build a production-ready enterprise-level full stack application using the following stack and standards.
+
+TECH STACK
+Frontend:
+- Streamlit
+
+Backend:
+- Python FastAPI
+
+Database:
+- SQLite using SQLAlchemy ORM
+
+Testing:
+- pytest
+- Playwright for end-to-end UI testing
+- Code coverage reporting
+
+ARCHITECTURE REQUIREMENTS
+- Clean modular architecture
+- Layered architecture
+- SOLID principles
+- Separation of concerns
+- Service layer pattern
+- Repository/DAO pattern
+- Reusable components
+- Config-driven architecture
+- Enterprise-grade folder structure
+- Scalable and maintainable codebase
+
+AUTHENTICATION & AUTHORIZATION
+- JWT authentication
+- Role-Based Access Control (RBAC)
+- Secure login/logout
+- Session management
+- Token expiration and refresh handling
+- Password hashing using bcrypt
+- Role-based frontend rendering
+- Protected APIs and routes
+
+SECURITY REQUIREMENTS
+- Input validation
+- Input sanitization
+- SQL injection prevention
+- XSS prevention
+- Secure API middleware
+- Secure password storage
+- Environment variable-based secret management
+- File upload validation
+- File size validation
+- Allowed extension validation
+- Request validation middleware
+- Secure error handling
+- Authentication middleware
+- Authorization middleware
+
+EXCEPTION HANDLING
+- Global exception handler
+- Centralized error handling
+- Standard API response format
+- Validation exceptions
+- Business exceptions
+- Structured error responses
+- Retry handling where needed
+- Graceful failure handling
+
+LOGGING & AUDITING
+- Structured logging
+- Request logging
+- Response logging
+- Error logging
+- Audit logging
+- Login/logout logging
+- User activity tracking
+- File processing logs
+- Database audit tables
+- Log levels:
+  - INFO
+  - DEBUG
+  - WARNING
+  - ERROR
+- Logs stored in:
+  - log files
+  - database tables
+
+DATABASE REQUIREMENTS
+- SQLAlchemy ORM
+- Proper schema design
+- Foreign keys
+- Constraints
+- Transactions
+- Indexing
+- Database migrations using Alembic
+- Soft delete support
+- Audit/history tables
+- Parameterized queries only
+- Repository pattern implementation
+
+API REQUIREMENTS
+- RESTful APIs
+- API versioning
+- Swagger/OpenAPI documentation
+- Request/response validation
+- Pagination
+- Filtering
+- Sorting
+- Standardized API responses
+- Health check endpoint
+
+STREAMLIT FRONTEND REQUIREMENTS
+- Login page
+- Dashboard page
+- Sidebar navigation
+- Role-based UI rendering
+- Session handling
+- Form validation
+- File upload UI
+- Download buttons
+- Search/filter support
+- Pagination
+- Error handling
+- Loading indicators
+- Reusable UI components
+- Responsive layout
+- Clean enterprise UI design
+
+FILE HANDLING REQUIREMENTS
+- Secure file uploads
+- Excel/CSV/PDF support
+- Duplicate file handling
+- File validation
+- Temporary file management
+- File processing logs
+- Downloadable processed reports
+- Error recovery handling
+
+BACKGROUND PROCESSING
+- Async processing support
+- Background task handling
+- Large file processing support
+- Batch processing support
+
+CONFIGURATION MANAGEMENT
+- .env support
+- Config class implementation
+- Separate development and production configs
+- Secret isolation
+- Centralized configuration management
+
+TESTING REQUIREMENTS
+- Unit tests
+- Integration tests
+- API tests
+- Service layer tests
+- Validation tests
+- Mock database tests
+- Playwright end-to-end tests
+- Automated frontend workflow testing
+- Authentication flow testing
+- File upload testing
+- API testing automation
+- Test fixtures and mocks
+
+CODE QUALITY REQUIREMENTS
+- Type hints
+- Docstrings
+- Linting support
+- Black formatting
+- Ruff/Flake8 linting
+- Code coverage reports
+- Coverage threshold enforcement
+- Maintainable and readable code
+- Reusable utility functions
+
+CODE COVERAGE REQUIREMENTS
+- pytest-cov integration
+- Generate HTML coverage reports
+- Generate terminal coverage reports
+- Minimum 85% code coverage
+- Coverage for:
+  - APIs
+  - services
+  - repositories
+  - authentication
+  - utilities
+  - middleware
+
+PERFORMANCE REQUIREMENTS
+- Optimized database queries
+- Lazy loading where applicable
+- Pagination support
+- Batch inserts
+- Async processing
+- Efficient file handling
+- Caching-ready architecture
+
+PRODUCTION READINESS
+- requirements.txt generation
+- startup scripts
+- logging folders
+- uploads folder
+- reports folder
+- graceful shutdown handling
+- retry mechanisms
+- centralized configuration
+- proper README documentation
+- installation guide
+- developer setup guide
+
+FOLDER STRUCTURE REQUIREMENTS
+Generate a complete enterprise folder structure including:
+- frontend/
+- backend/
+- api/
+- services/
+- repositories/
+- middleware/
+- auth/
+- validators/
+- models/
+- database/
+- migrations/
+- logs/
+- uploads/
+- reports/
+- tests/
+- playwright tests/
+- docs/
+
+DELIVERABLES
+Generate:
+1. Complete project folder structure
+2. Backend FastAPI application
+3. Streamlit frontend
+4. SQLite database models
+5. Authentication system
+6. RBAC implementation
+7. Logging framework
+8. Audit framework
+9. Exception handling framework
+10. Middleware implementation
+11. File upload system
+12. API documentation
+13. Alembic migrations
+14. Unit tests
+15. Integration tests
+16. Playwright E2E tests
+17. Code coverage setup
+18. requirements.txt
+19. .env.example
+20. Startup scripts
+21. README.md
+22. Production-ready configuration setup
+
+Ensure the application follows enterprise-level coding standards, maintainability, scalability, security, and production-ready best practices.
